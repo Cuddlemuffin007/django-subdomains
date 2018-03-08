@@ -8,7 +8,7 @@ from django.conf import settings
 try:
     from django.urls import reverse as simple_reverse
 except ImportError:  # Django<2.0
-    from django.core.urlresolvers  import reverse as simple_reverse
+    from django.core.urlresolvers import reverse as simple_reverse
 
 
 def current_site_domain():
@@ -21,6 +21,7 @@ def current_site_domain():
         domain = domain.replace(prefix, '', 1)
 
     return domain
+
 
 get_domain = current_site_domain
 

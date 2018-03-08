@@ -17,11 +17,6 @@ except ImportError:
 logger = logging.getLogger(__name__)
 lower = operator.methodcaller('lower')
 
-try:
-    from django.utils.deprecation import MiddlewareMixin
-except ImportError:
-    MiddlewareMixin = object
-
 UNSET = MiddlewareMixin()
 
 
